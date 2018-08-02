@@ -63,13 +63,13 @@ VALUES
 '4');
 
 -- TINYBLOB 257 byte
-CREATE TABLE adsi.t
+CREATE TABLE adsi.t3
 (
     campo1 int primary key,
     campo2 tinyblob
 );
 
-INSERT INTO adsi.t
+INSERT INTO adsi.t3
 (campo1,
 campo2)
 VALUES
@@ -77,21 +77,21 @@ VALUES
 '101');
 
 -- TINYtext
-CREATE TABLE adsi.t
+CREATE TABLE adsi.t4
 (
     campo1 int primary key,
     campo2 tinytext
 );
 
-INSERT INTO adsi.t
+INSERT INTO adsi.t4
 (campo1,
 campo2)
 VALUES
-(2,
-'101');
+(1,
+'r');
 
 -- blob
-CREATE TABLE adsi.t
+CREATE TABLE adsi.t5
 (
     campo1 int primary key,
     campo2 blob
@@ -119,7 +119,7 @@ VALUES
 '101');
 
 -- mediumblob
-CREATE TABLE adsi.t
+CREATE TABLE adsi.t6
 (
     campo1 int primary key,
     campo2 mediumblob
