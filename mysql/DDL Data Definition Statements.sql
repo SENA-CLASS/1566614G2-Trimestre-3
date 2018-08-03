@@ -18,27 +18,6 @@ drop table adsi.tabla1;
 
 -- crear talblas normales
 
-create table adsi.tabla1(
- id int primary key auto_increment,
- campo2 varchar(100)
-);
-
-create table adsi.tabla2(
-	campo1 int primary key auto_increment,
-    campo2 int not null,
-    campo3 int null,
-    campo4 int unique,
-    campo5 int,
-    unique index campo5_idx (campo5),
-    campo6 int
-    comment 'este es el comentario del campo6',
-	campo2_tabla1 int not null,
-     foreign key (campo2_tabla1) references adsi.tabla1(id),
-	campo7 int default 6,
-    campo8 int, 
-    check(campo8 > 10)
-) comment 'esta es la tabla 2';
-
 -- llave primaria
 
 create table adsi.tabla1 (
@@ -57,9 +36,10 @@ create table adsi.tabla2(
     campo4 varchar(10),
     index campo3_idx (campo3),
     unique index campo4_idx (campo4)
+
 );
 
-
+create schema observador_de_proyectos;
 
 -- llave primaria compuesta
 
@@ -126,7 +106,7 @@ create table adsi.billetera(
 create table adsi.billete(
 	id int,
     id_billetera int not null,
-    constraint fk_billetera foreign key (id_billetera) references adsi.billetera(id),
+    constraint billete_billetera_fk foreign key (id_billetera) references adsi.billetera(id),
     primary key(id, id_billetera)
 );
 
