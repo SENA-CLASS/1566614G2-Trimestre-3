@@ -103,6 +103,8 @@ create table adsi.billetera(
     marca varchar(50)
 );
 
+-- con nombre de la restrición
+
 create table adsi.billete(
 	id int,
     id_billetera int not null,
@@ -128,7 +130,7 @@ create table adsi.persona(
 create table adsi.casa(
 	matricula varchar(10) primary key comment 'matricula inmoviliaria del inmueble',
     direccion varchar(45) comment 'la direcciòn del inmueble'
-);
+) comment 'comentario de la tabla';
 
 create table adsi.persona(
 	tipo_documento varchar(10) comment 'addfasdfasdfasdfadfdsfsfa',
@@ -141,13 +143,13 @@ create table adsi.persona_has_casa(
 	tipo_documento varchar(10),
     numero_documento varchar(45),
     matricula varchar(10),
-    constraint fk_phc_casa foreign key (matricula) references adsi.casa(matricula),
-    constraint fk_phc_persona foreign key(tipo_documento, numero_documento) references adsi.persona(tipo_documento, numero_documento)
+    constraint fk_casa foreign key (matricula) references adsi.casa(matricula),
+    constraint fk_persona foreign key(tipo_documento, numero_documento) references adsi.persona(tipo_documento, numero_documento)
     on update cascade on delete no action
     ,
     primary key(tipo_documento, numero_documento, matricula),
-    index fk_psc_persona_idx (tipo_documento ASC, numero_documento ASC),
-    index fk_psc_casa_idx (matricula asc)
+     index fk_persona_idx (tipo_documento ASC, numero_documento ASC),
+     index fk_casa_idx (matricula asc)
 );
 
 -- autoincrement
@@ -165,7 +167,7 @@ drop table nombrelatabla;
 
 -- alter table
 
-describe adsi.ejemplo1;
+describe adsi.persona;
 
 
 create table adsi.ejemplo1(
