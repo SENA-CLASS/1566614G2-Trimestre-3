@@ -52,6 +52,12 @@ SET
 direccion = 'nue'
 WHERE matricula = '1234'; -- where
 
+select * from observador_de_proyectos.cliente;
+
+update observador_de_proyectos.cliente
+set segundo_apellido = null
+where numero_documento = '1000063252';
+
   rollback ;
 
 INSERT INTO `Horario_DB2`.`Documento`
@@ -111,7 +117,7 @@ select * from observador_de_proyectos.cliente c where c.numero_documento='990213
 
 -- alias son nombre mas cortos que se le dan a una tabla
 
-select * from observador_de_proyectos.cliente c where c.numero_documento='99021305606'; 
+select * from observador_de_proyectos.cliente c where c.numero_documento='99021305606';
 select * from observador_de_proyectos.cliente as c where c.numero_documento='99021305606'; 
 
 
@@ -180,7 +186,7 @@ select * from observador_de_proyectos.cliente_has_rol chr where chr.numero_docum
 select * from observador_de_proyectos.cliente_has_rol chr where chr.numero_documento in ('1000063252', '1001270013') ;
 
 -- uso del any esigual que el some
-select * from observador_de_proyectos.cliente c where c.numero_documento = any (select fi.numero_documento from observador_de_proyectos.instructor_ficha fi where fi.ficha= '1349397');
+select * from observador_de_proyectos.cliente c where c.numero_documento = any (select fi.numero_documento from observador_de_proyectos.instructor_ficha fi where fi.ficha= '1621480G3');
 select * from observador_de_proyectos.cliente c where c.numero_documento = some (select fi.numero_documento from observador_de_proyectos.instructor_ficha fi where fi.ficha= '1349397');
 
 select fi.numero_documento from observador_de_proyectos.instructor_ficha fi where fi.ficha= '1349397';
@@ -197,6 +203,19 @@ select * from observador_de_proyectos.cliente c where c.numero_documento like '1
 select * from observador_de_proyectos.cliente c where c.numero_documento like '1%5%';
 
 -- JOINS
+-- join sirve para consultar uniendo tablas
+
+SELECT c.tipo_documento, c.numero_documento, c.primer_nombre FROM observador_de_proyectos.cliente c, observador_de_proyectos.usuario u
+where c.tipo_documento = u.tipo_documento and c.numero_documento = u.numero_documento
+and c.descripcion = u.descripcion
+;
+
+select count(*) from observador_de_proyectos.cliente;
+select count(*) from observador_de_proyectos.usuario;
+
+SELECT * FROM observador_de_proyectos.cliente c left join observador_de_proyectos.usuario u
+on c.tipo_documento = u.tipo_documento and c.numero_documento = u.numero_documento
+;
 
 -- join implicitos
 
@@ -213,7 +232,7 @@ WHERE
     c.tipo_documento = cr.tipo_documento
         AND c.numero_documento = cr.numero_documento
         AND c.tipo_documento = 'CC'
-        AND c.numero_documento = '80013833';
+        AND c.numero_documento = '80013834';
         
 SELECT 
 	t.descripcion,
@@ -234,7 +253,7 @@ WHERE
         AND c.numero_documento = cr.numero_documento and cr.rol = r.id_rol and t.documento= c.tipo_documento)
         
        and  c.tipo_documento = 'CC'
-        AND c.numero_documento = '80013833';
+        AND c.numero_documento = '80013834';
 
 -- join explicito
 
@@ -246,7 +265,7 @@ SELECT
     cr.estado
 FROM
     observador_de_proyectos.cliente c
-        JOIN
+       JOIN
     observador_de_proyectos.cliente_has_rol cr ON (c.tipo_documento = cr.tipo_documento
         AND c.numero_documento = cr.numero_documento)
 WHERE
@@ -299,7 +318,7 @@ WHERE
 SELECT 
     *
 FROM
-    observador_de_proyectos.cliente c left JOIN observador_de_proyectos.aprendiz a 
+    observador_de_proyectos.cliente c join observador_de_proyectos.aprendiz a
     ON c.tipo_documento = a.tipo_documento and c.numero_documento = a.numero_documento
 ;
 
@@ -314,24 +333,29 @@ FROM
 
 
 -- cross join producto cartesiano de las dos tablas
-SELECT 
-    *
+select count(*) from observador_de_proyectos.cliente;
+select count(*) from observador_de_proyectos.usuario;
+
+
+SELECT
+    count(*)
 FROM
-    observador_de_proyectos.aprendiz a cross JOIN observador_de_proyectos.cliente c 
+    observador_de_proyectos.usuario a cross JOIN observador_de_proyectos.cliente c
 ;
 
 -- usando el using
 SELECT 
     *
 FROM
-    observador_de_proyectos.aprendiz a cross JOIN observador_de_proyectos.cliente c using(tipo_documento, numero_documento) 
+    observador_de_proyectos.aprendiz a inner JOIN observador_de_proyectos.cliente c
+    using(tipo_documento, numero_documento) -- las llaves deben llamarse igual
 ;
 
 select count(*) from  observador_de_proyectos.cliente;
           
 -- subconsultas
-        
-SELECT 
+
+SELECT
     *
 FROM
     (SELECT 
@@ -353,7 +377,7 @@ FROM
             AND t.documento = c.tipo_documento)) as a
 WHERE
     a.tipo_documento = 'CC'
-        AND a.numero_documento = '80013833';
+        AND a.numero_documento = '80013834';
         
 SELECT 
     *
@@ -366,7 +390,9 @@ WHERE
             observador_de_proyectos.aprendiz a);
 
 
-select * from observador_de_proyectos.aprendiz inner join observador_de_proyectos.cliente using(tipo_documento, numero_documento);
+select * from observador_de_proyectos.aprendiz
+                inner join observador_de_proyectos.cliente
+                  using(tipo_documento, numero_documento);
 
 -- insertar una imagen
 -- PARA METER UN CAMPO LONBLOG PARA UNA IMAGEN cambiar la ruta se la variable del archivo my.ini secure-file-priv
