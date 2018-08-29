@@ -389,10 +389,18 @@ WHERE
         FROM
             observador_de_proyectos.aprendiz a);
 
+select * from observador_de_proyectos.aprendiz a
+                inner join observador_de_proyectos.cliente c
+                  using(tipo_documento, numero_documento)
+                  where c.tipo_documento = 'CC'
+                  and c.numero_documento like '%1022427536\'45' 
+                  ;
+                  
+                  
 
-select * from observador_de_proyectos.aprendiz
-                inner join observador_de_proyectos.cliente
-                  using(tipo_documento, numero_documento);
+select * from observador_de_proyectos.aprendiz c where c.tipo_documento = 'CC'
+                  and c.numero_documento = '1022427536';
+
 
 -- insertar una imagen
 -- PARA METER UN CAMPO LONBLOG PARA UNA IMAGEN cambiar la ruta se la variable del archivo my.ini secure-file-priv

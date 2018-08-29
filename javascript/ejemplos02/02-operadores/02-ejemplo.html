@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Ingrese un número entre  18 y 99:</b>
+<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+
+<form name="miFormulario">
+    Nombre del formulario:
+    <input type="text" name="text1" value="Beluga"/>
+    <input type="button" name="button1" value="Mostrar nombre del formulario"
+           onClick="this.form.text1.value = this.form.name;"/>
+</form>
+
+<script src="js/ejemplo02.js"></script>
+</body>
+</html>
