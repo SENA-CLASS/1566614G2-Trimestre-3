@@ -16,13 +16,13 @@ var o= {
     0: "Tostado Frances",
     1: "Colombiano",
     2: "Kona"
-}
+};
 
 console.log(o["0"]);
 console.log(o["1"]);
 console.log(o["2"]);
 
-var ob = new Boolean(true); // este es un literal boleano que al final es un objeto
+var ob = Boolean(true); // este es un literal boleano que al final es un objeto
 console.log(typeof ob);
 
 var tb = true;
@@ -64,8 +64,11 @@ console.log(typeof lf4);
 
 var Ventas = "Toyota";
 
+/**
+ * @return {string}
+ */
 function TiposCarro(nombre) {
-    if (nombre== "Honda") {
+    if (nombre === "Honda") {
         return nombre;
     } else {
         return "Lo siento, nosotros no vendemos " + nombre + ".";
@@ -82,7 +85,7 @@ console.log(typeof carro.miCarro);  // Saturn
 console.log(typeof carro.getCarro); // Honda
 console.log(typeof carro.especial); // Toyota
 
-var avion ={}
+var avion = {};
 
 console.log(typeof carro);
 console.log(typeof avion);
@@ -101,7 +104,7 @@ console.log(typeof auto.algunosAutos.b);
 var propiedadesDeNombreInusual = {
     "": "Un string vacio",
     "!": "Bang!"
-}
+};
 //console.log(propiedadesDeNombreInusual."");   // SyntaxError: Unexpected string
 console.log(propiedadesDeNombreInusual[""]);  // "Un string vacio"
 //console.log(propiedadesDeNombreInusual .!);    // SyntaxError: Unexpected token !
@@ -116,8 +119,9 @@ console.log("El gato de Jhon".length);
 console.log("una linea \n otra linea");
 console.log("una linea \b\b\b\b\b otra linea");
 
+
 var str = "this string \
 is broken \
 across multiple\
-lines."
+lines.";
 console.log(str);   // this string is broken across multiplelines.
