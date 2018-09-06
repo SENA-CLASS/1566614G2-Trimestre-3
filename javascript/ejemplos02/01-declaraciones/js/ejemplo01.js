@@ -10,6 +10,7 @@
  *
  */
 
+debugger;
 var $1a;
 var _1a;
 var a1;
