@@ -22,6 +22,4 @@
     }
     console.log(mayor);
     console.log(matriz);
-
-
 })();
