@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a id="enlace01" class="class01" href="https://www.w3schools.com">This is a link</a>
+<div id="div01"></div>
+<script>
+    let objeto = document.getElementById('enlace01');
+    console.log(objeto.attributes.item(0));
+    document.getElementById('div01').innerHTML = objeto;
+    for (let i=0; i<objeto.attributes.length;i++){
+        console.log(objeto.attributes.item(i));
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="male" value="male"><br>
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="female"><br>
+    <label for="other">Other</label>
+    <input type="radio" name="gender" id="other" value="other"><br><br>
+    <input id="btn" type="button" value="Submit">
+</form>
+<div id="seleccion"></div>
+<script>
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function () {
+        let arreglo=document.getElementsByName("gender");
+            document.getElementsByName("gender").forEach(x=>{
+            console.log(x.defaultValue+" "+x.checked);
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
