@@ -1,0 +1,137 @@
+/**
+bordes
+ */
+
+#parrafo1 {
+    border-style: dotted;
+}
+
+#parrafo2 {
+    border-style: dashed;
+    border-top-color: #ff1e20;
+    border-left-color: aqua;
+    border-right-color: chartreuse;
+    border-bottom-color: darkorange;
+}
+
+#parrafo3 {
+    border-style: solid;
+    border-top-color: #ff1e20;
+    border-left-color: aqua;
+    border-right-color: chartreuse;
+    border-bottom-color: darkorange;
+    border-width: 15px;
+}
+
+#parrafo4 {
+    border-style: double;
+}
+
+#parrafo5 {
+    border-style: ridge;
+}
+
+#parrafo6 {
+    border-style: inset;
+}
+
+#parrafo7 {
+    border-style: outset;
+}
+
+#parrafo8 {
+    border-style: groove;
+}
+
+#parrafo9 {
+    border-style: none;
+}
+
+#parrafo10 {
+    border-style: hidden;
+}
+
+#parrafo11 {
+    /* top rigth bottom left*/
+    border-style: dotted dashed solid double;
+}
+
+/* borde taquigráfico*/
+#parrafo12 {
+    border: 5px solid red;
+}
+
+/*left border*/
+#parrafo13 {
+    border-left: 5px solid blue;
+}
+
+/*botom border*/
+#parrafo14 {
+    border-bottom: 5px solid blue;
+}
+
+/*top border*/
+#parrafo15 {
+    border-top: 5px solid yellow;
+}
+
+/*rigth border*/
+#parrafo16 {
+    border-right: 5px solid blueviolet;
+}
+
+/*
+Rounded Borders
+*/
+#par1 {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#par2 {
+    border: 2px inset blue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#par3 {
+    border: 2px solid red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 50px;
+}
+
+/*
+Border Width
+
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.
+in, pulgadas ("inches", en inglés).
+Una pulgada equivale a 2.54 centímetros.
+
+ABSOLUTAS
+cm, centímetros.
+mm, milímetros.
+pt, puntos. Un punto equivale a 1 pulgada/72, es decir, unos 0.35 milímetros.
+pc, picas. Una pica equivale a 12 puntos, es decir, unos 4.23 milímetros.
+
+UNIDADES RELATIVAS
+em, (no confundir con la etiqueta <em> de HTML) relativa respecto del tamaño de letra del elemento.
+ex, relativa respecto de la altura de la letra x ("equis minúscula") del tipo y tamaño de letra del elemento.
+px, (píxel) relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.
+
+PORCENTAJES %
+
+*/
+#par4 {
+    border: 1em solid red;
+}
+
+#par5 {
+    font-family: Arial;
+    font-size: 50px;
+    border: 0.1em solid red;
+    border-radius: 5px;
+}
+
