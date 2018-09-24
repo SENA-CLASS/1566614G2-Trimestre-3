@@ -1,0 +1,70 @@
+/**
+colores  con nombre hay 140 verlos en la pagina
+ https://www.w3schools.com/colors/colors_names.asp
+*/
+#parrafo1 {
+    color: DarkSlateBlue;
+}
+
+/*
+colores rgb
+rgb(red, green, blue)
+*/
+#parrafo2 {
+    color: rgb(128, 255, 62);
+}
+
+/*
+colores HEX
+#rrggbb
+
+Where rr (red), gg (green) and bb (blue) esta va de 00 hasta el FF
+
+ */
+#parrafo3 {
+    color: #ff1e20;
+}
+
+/**
+colores HSL
+hue, saturation, and lightness (HSL)
+
+hsl(hue, saturation, lightness)
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+
+
+ */
+#parrafo4 {
+    color: hsl(62, 79%, 47%);
+}
+
+/**
+colores RGBA
+rgba(red, green, blue, alpha)
+alpha parameter is a number between 0.0 (fully transparent) and 1.0
+ */
+#parrafo5 {
+    color: rgba(33, 41, 255, 0.5);
+}
+
+/**
+colores HSLA
+hsla(hue, saturation, lightness, alpha)
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all)
+ */
+
+#parrafo6 {
+    color: hsla(9, 100%, 64%, 0.6);
+}
