@@ -4,3 +4,54 @@ background-color
 #pagina1 {
     background-color: #ff1e20;
 }
+
+/**
+Background Image
+ */
+#pagina2 {
+    background-image: url("../imagenes/Goku_FnF.png");
+}
+
+/**
+Background Image in x position
+ */
+#pagina3 {
+    background-image: url("../imagenes/Goku_FnF.png");
+    background-repeat: repeat-x;
+}
+
+/**
+Background Image in x position
+ */
+#pagina4 {
+    background-image: url("../imagenes/Goku_FnF.png");
+    background-repeat: repeat-y;
+}
+
+/**
+Background Image no repeat
+ */
+#pagina5 {
+    background-image: url("../imagenes/Goku_FnF.png");
+    background-repeat: no-repeat;
+}
+
+/**
+Background Image - Fixed position
+ */
+#pagina6 {
+    background-image: url("../imagenes/Goku_FnF.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+/**
+Background - Shorthand property
+ */
+#pagina7 {
+    background: #0b2aff url("../imagenes/Goku_FnF.png") no-repeat right top;
+    background-size: 100px 300px;
+}
+
+
