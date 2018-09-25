@@ -1,0 +1,48 @@
+/**
+margins
+ */
+
+#parrafo1 {
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: lightblue;
+}
+
+/*
+Margin - Shorthand Property
+*/
+#parrafo2 {
+    border: 1px solid black;
+    margin: 100px 150px 120px 80px;
+    /*top right bottom left*/
+    background-color: lightblue;
+}
+
+/*The auto Value*/
+
+#parrafo3 {
+    width: 500px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+/*The inherit Value*/
+#elemnto1 {
+    margin-left: 70px;
+}
+
+#parrafo4 {
+    margin-left: inherit;
+}
+
+#elemento2 {
+    margin-bottom: 20px;
+
+}
+
+#elemento3 {
+    margin-top: 50px;
+}
