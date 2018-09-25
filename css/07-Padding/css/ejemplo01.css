@@ -1,0 +1,30 @@
+/*
+CSS Padding
+ */
+
+/*
+Padding - Individual Sides
+ */
+
+#elemento1 {
+    margin: 10px 15px 20px 25px;
+
+    border: 20px solid #ff1e20;
+
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+}
+
+#caraboton {
+    margin-left: 400px;
+    border: 2px solid #ff1e20;
+    border-radius: 10px;
+
+    padding: 10px 10px 10px 10px;
+
+    background-color: #ff1e20;
+    width: 150px;
+    text-align: center;
+}
