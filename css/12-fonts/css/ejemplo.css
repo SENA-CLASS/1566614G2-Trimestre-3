@@ -1,0 +1,10 @@
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 10vw;
+    font-weight: bolder;
+}
+
+#font1 {
+    font-variant: small-caps;
+}
