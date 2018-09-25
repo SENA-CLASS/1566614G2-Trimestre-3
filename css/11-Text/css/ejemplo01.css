@@ -1,0 +1,31 @@
+#i1 {
+    color: #ff1e20;
+    text-align: left;
+
+}
+
+a {
+    text-decoration: line-through;
+}
+
+#i3 {
+    text-transform: capitalize;
+}
+
+#i4 {
+    text-indent: 50px;
+}
+
+#i5 {
+    letter-spacing: 3px;
+}
+
+#i6 {
+    line-height: 1.2px;
+    direction: rtl;
+}
+
+#i7 {
+    word-spacing: 10px;
+    text-shadow: 1px 1px red;
+}
