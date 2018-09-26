@@ -6,36 +6,32 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<div class="w3-row-padding w3-center" style="margin:20px 20px">
-    <div class="w3-col w3-border" id="imgbox1" style="width: 30%; display: block;"><p style="word-wrap: break-word;">
-        <code class="w3-codespan" style="wrap">display:none</code></p>
-        <img src="https://www.w3schools.com/css/img_5terre.jpg" style="width:100%" alt="Italia">
-        <p>
-            <button class="w3-button w3-block w3-green" onclick="removeElement()"><font
-                    style="vertical-align: inherit;"><font style="vertical-align: inherit;">retirar</font></font>
-            </button>
-        </p>
-    </div>
-    <div class="w3-col w3-border" style="width: 30%; visibility: visible;" id="imgbox2"><p
-            style="word-wrap: break-word;"><code class="w3-codespan">visibility:hidden</code></p>
-        <img src="https://www.w3schools.com/css/img_forest.jpg" style="width:100%" alt="Bosque">
-        <p>
-            <button class="w3-button w3-block w3-green" onclick="changeVisibility()"><font
-                    style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esconder</font></font>
-            </button>
-        </p>
-    </div>
-    <div class="w3-col w3-border" style="width:30%;"><p><font style="vertical-align: inherit;"><font
-            style="vertical-align: inherit;">Reiniciar</font></font></p>
-        <img src="https://www.w3schools.com/css/img_lights.jpg" style="width:100%" alt="Luces">
-        <p>
-            <button class="w3-button w3-block w3-green" onclick="resetElement()"><font style="vertical-align: inherit;"><font
-                    style="vertical-align: inherit;">Resetear todo</font></font></button>
-        </p>
+<div class="w3-content test" style="max-width:800px">
+    <div class="w3-row-padding w3-center" style="margin:20px">
+        <div class="w3-col w3-border" id="imgbox1" style="width:30%;"><p style="word-wrap: break-word;"><code
+                class="w3-codespan" style="wrap">display:none</code></p>
+            <img src="https://www.w3schools.com/css/img_5terre.jpg" style="width:100%" alt="Italy">
+            <p>
+                <button class="w3-button w3-block w3-green" onclick="removeElement()">Remove</button>
+            </p>
+        </div>
+        <div class="w3-col w3-border" style="width:30%;" id="imgbox2"><p style="word-wrap: break-word;"><code
+                class="w3-codespan">visibility:hidden</code></p>
+            <img src="https://www.w3schools.com/css/img_forest.jpg" style="width:100%" alt="Forest">
+            <p>
+                <button class="w3-button w3-block w3-green" onclick="changeVisibility()">Hide</button>
+            </p>
+        </div>
+        <div class="w3-col w3-border" style="width:30%;"><p>Reset</p>
+            <img src="https://www.w3schools.com/css/img_lights.jpg" style="width:100%" alt="Lights">
+            <p>
+                <button class="w3-button w3-block w3-green" onclick="resetElement()">Reset All</button>
+            </p>
+        </div>
     </div>
 </div>
-
 <script>
+
     function removeElement() {
         document.getElementById("imgbox1").style.display = "none";
     }
@@ -48,6 +44,7 @@
         document.getElementById("imgbox1").style.display = "block";
         document.getElementById("imgbox2").style.visibility = "visible";
     }
+
 </script>
 
 </body>
